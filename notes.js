@@ -1,14 +1,25 @@
 console.log('Starting notes.js.');
 
+let addNote = (title, body) => {
+	console.log("Adding note: ", title, body);
+};
 
-module.exports.age = 28;
+let getAll = () => {
+	console.log("Retrieving All Notes: ");
+};
 
-module.exports.addNote = () => {
-	console.log('addNote');
-	return 'New note';
-}
+let getNote = (title) => {
+	console.log("Retrieving Note: ", title);
+};
 
-module.exports.add = (a,b) => {
-	console.log('add');
-	return a + b;
+let removeNote = (title) => {
+	console.log("Removed Note: ", title);
+};
+
+// ES6 if value is identical you only have to place it once ex. addNote,
+module.exports = {
+	addNote: addNote,
+	getAll: getAll,
+	getNote: getNote,
+	removeNote: removeNote
 }

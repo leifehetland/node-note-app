@@ -27,7 +27,7 @@ if (command === 'add') {
 	notes.getAll();
 } else if (command === 'read') {
 	// console.log('Reading note.');
-	let note = notes.getNote(argv.title, argv.body);
+	let note = notes.getNote(argv.title);
 	
 	if (note) {
 		console.log('Note read.');

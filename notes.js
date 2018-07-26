@@ -38,7 +38,14 @@ let getAll = () => {
 };
 
 let getNote = (title) => {
-	console.log("Retrieving Note: ", title);
+	// console.log("Retrieving Note: ", title);
+	let notes = fetchNotes();
+
+	let filterNotes = notes.filter((note) => {
+		return note.title === title;
+	});
+
+	return filterNotes[0];
 };
 
 let removeNote = (title) => {
@@ -57,6 +64,12 @@ let removeNote = (title) => {
 
 	return notes.length !== filterNotes.length;
 };
+
+let logNote = (note) => {
+	console.log('------------');
+	console.log(`Title: ${note.title}`);
+	console.log(`Body: ${note.body}`);
+}
 
 // ES6 if value is identical you only have to place it once ex. addNote,
 module.exports = {

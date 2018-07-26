@@ -32,7 +32,10 @@ if (command === 'add') {
 	notes.getNote(argv.title);
 } else if (command === 'remove') {
 	// console.log('Removing note.');
-	notes.removeNote(argv.title);
+	let noteRemoved = notes.removeNote(argv.title);
+	// Ternary Operator
+	let message = noteRemoved ? 'Note was removed' : 'Note not found';
+	console.log(message);
 } else {
 	console.log('Command not recognized.');	
 }

@@ -42,7 +42,20 @@ let getNote = (title) => {
 };
 
 let removeNote = (title) => {
-	console.log("Removed Note: ", title);
+	// console.log("Removed Note: ", title);
+
+	// fetch notes
+	let notes = fetchNotes();
+
+	// Filter notes
+	let filterNotes = notes.filter((note) => {
+		return note.title !== title;
+	});
+
+	// save notes
+	saveNotes(filterNotes);
+
+	return notes.length !== filterNotes.length;
 };
 
 // ES6 if value is identical you only have to place it once ex. addNote,

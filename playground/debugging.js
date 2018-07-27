@@ -1,10 +1,11 @@
-// let person = {
-// 	name: 'Leif'
-// };
+let person = {
+	name: 'Leif'
+};
 
-// person.age = 28;
+person.age = 28;
 
+// debugger;
 
-// person.name = 'Sven';
+person.name = 'Sven';
 
-// console.log(person);
+console.log(person);

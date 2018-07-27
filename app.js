@@ -24,7 +24,11 @@ if (command === 'add') {
 
 } else if (command === 'list') {
 	// console.log('Listing all notes.');
-	notes.getAll();
+	let allNotes = notes.getAll();
+	console.log(`Printing ${allNotes.length} note(s).`);
+	// For each, expression syntax
+	allNotes.forEach((note) => notes.logNote(note));
+	
 } else if (command === 'read') {
 	// console.log('Reading note.');
 	let note = notes.getNote(argv.title);
